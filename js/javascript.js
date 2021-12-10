@@ -1,3 +1,7 @@
+alert("Я JavaScript");
+
+/*  II глава "Грокаем алгоритмы"
+
 const findSmallest = (arr) => {
   let smallest = arr[0];
   let smallestIndex = 0;
@@ -25,3 +29,4 @@ const numbers = [25, 15, 16, 5, 6, 9, 2, 18, 6, 13];
 
 selectionSort(numbers);
 console.log(selectionSort(numbers));
+*/
