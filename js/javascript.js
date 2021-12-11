@@ -1,6 +1,60 @@
-alert("Я JavaScript");
+// alert("Я JavaScript");
 
-/*  II глава "Грокаем алгоритмы"
+/* let login = prompt("Vvedite login", "");
+let password;
+
+if (login === "Admin") {
+  password = prompt("Vvedite password", "");
+
+  if (password === "Ya glavniy") {
+    alert("Zdravstvuyte");
+  } else if (password === null) {
+    alert("Otemeneno");
+  } else {
+    alert("Neverniy parol");
+  }
+} else if (login === null || login === "") {
+  alert("Otemeneno");
+} else {
+  alert("Ya vas ne znayu");
+} */
+
+/* let result = 1 && 8 && 3;
+alert(result); */
+
+/* let login = prompt("Vvedite login", "");
+login == "Sotrudnik"
+  ? alert("Privet")
+  : login == "Director"
+  ? alert("Zdravstvuyte")
+  : login == ""
+  ? alert("Net logina")
+  : alert("Login ne nayden"); */
+
+/* let a = 1;
+let b = 2;
+
+let result = a + b < 4 ? "Malo" : "Mnogo";
+alert(result);
+ */
+/* let writeNumber = prompt("Введите число", "");
+if (writeNumber > 0) {
+  alert("1");
+} else if (writeNumber < 0) {
+  alert("-1");
+} else {
+  alert("0");
+}
+ */
+/* let admin;
+let name;
+name = "Джон";
+admin = name;
+alert(admin);
+let ourPlanetName;
+let currentUserName; */
+
+/* II глава "Грокаем алгоритмы"
 
 const findSmallest = (arr) => {
   let smallest = arr[0];
@@ -28,5 +82,4 @@ const selectionSort = (array) => {
 const numbers = [25, 15, 16, 5, 6, 9, 2, 18, 6, 13];
 
 selectionSort(numbers);
-console.log(selectionSort(numbers));
-*/
+console.log(selectionSort(numbers)); */
