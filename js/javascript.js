@@ -1,16 +1,61 @@
 // alert("Я JavaScript");
 
+/* let string = "";
+cnt = 5;
+while (cnt--) {
+  string += "*";
+  console.log(string);
+} */
+
+cycle: for (let num = 0; num < 3; num++) {
+  for (let size = 0; size < 4; size++) {
+    if (size === 3) break cycle;
+    console.log(size);
+  }
+}
+/* let num = 0;
+while (num < 3) {
+  console.log(`Число: ${num}`);
+  num++;
+} */
+
+/* for (i = 1; i <= 10; i++) {
+  console.log(i);
+} */
+
+/* const ourArray = [];
+let i = 0;
+
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+console.log(ourArray); */
+/* let num = +prompt("Vvedite 4islo");
+
+next: for (i = 2; i <= num; i++) {
+  for (j = 2; j < i; j++) {
+    if (i % j === 0) continue next;
+  }
+  console.log(i);
+} */
+
+/* let num;
+do {
+  num = prompt("vvedite 4islo", 0);
+} while (num <= 100 && num);
+ */
 /* for (i = 0; i <= 10; i++) {
   if (i % 2 == 0) {
     console.log(i);
   }
 } */
 
-let i = 0;
+/* let i = 0;
 while (i < 3) {
   console.log(`number ${i}`);
   i++;
-}
+} */
 
 /* let login = prompt("Vvedite login", "");
 let password;
