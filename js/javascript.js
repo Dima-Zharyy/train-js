@@ -7,12 +7,28 @@ while (cnt--) {
   console.log(string);
 } */
 
-cycle: for (let num = 0; num < 3; num++) {
+let arr = [];
+
+for (i = 0; i < 10; i++) {
+  arr[i] = Math.random().toFixed(1) * 10;
+}
+
+console.log(arr);
+
+/* let arr = [];
+
+for (i = 0; i < 10; i++) {
+  arr[i] = Math.random().toFixed(2);
+  if (arr[i] === "0.00" || arr[i] === "1.00") continue;
+}
+console.log(arr); */
+
+/* cycle: for (let num = 0; num < 3; num++) {
   for (let size = 0; size < 4; size++) {
     if (size === 3) break cycle;
     console.log(size);
   }
-}
+} */
 /* let num = 0;
 while (num < 3) {
   console.log(`Число: ${num}`);
