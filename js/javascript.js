@@ -1,5 +1,12 @@
 // alert("Я JavaScript");
 
+let arr = [2, 3, 4, 5];
+let result = 1;
+for (let i = 0; i < arr.length; i++) {
+  result *= arr[i];
+}
+console.log(result);
+
 /* let string = "";
 cnt = 5;
 while (cnt--) {
@@ -7,14 +14,37 @@ while (cnt--) {
   console.log(string);
 } */
 
-let arr = [];
-
-for (i = 0; i < 10; i++) {
-  arr[i] = Math.random().toFixed(1) * 10;
+/* let arr = [1, 2, 3, 4, 5];
+let sum = 0;
+for (i = 0; i < arr.length; i++) {
+  sum += arr[i];
 }
+console.log(sum / arr.length); */
 
-console.log(arr);
+/* let arr = [1, 2, 3];
+let sum = 0;
+for (i = 0; i < arr.length; i++) {
+  sum += arr[i] * arr[i];
+}
+console.log(sum);
+ */
+/* let arr = [10, 15, 12, 0, 13, 2, 1, 6, 5, 8, 5, 22];
 
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] === 5) {
+    console.log("Есть");
+    break
+  }
+} */
+
+/* let arr = [10, 15, 12, 0, 13, 2, 1, 6, 13, 8, 5, 22];
+
+for (i = 0; i < arr.length - 1; i++) {
+  if (arr[i] > 0 && arr[i] < 10) continue;
+
+  console.log(arr[i]);
+}
+ */
 /* let arr = [];
 
 for (i = 0; i < 10; i++) {
