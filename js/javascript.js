@@ -1,11 +1,140 @@
+"use strict";
+
+// let firstNumber = prompt("Введите число");
+// firstNumber = Number(firstNumber);
+// let secondNumber = prompt("Введите степень");
+// secondNumber = Number(secondNumber);
+
+// const result = firstNumber ** secondNumber;
+
+// console.log(result);
+
+// const isOnline = true;
+// const isFriend = true;
+// const isDontDisturb = false;
+
+// const canOpenChat = isOnline && isFriend && !isDontDisturb;
+
+// console.log("Can I open chat with this user? ", canOpenChat);
+
+const totalSpent = 1000;
+let payment = 500;
+let discount;
+
+if (totalSpent >= 100 && totalSpent <= 1000) {
+  discount = 0.02;
+  console.log(`You are the Bronze partner with discount ${discount * 100}%`);
+} else if (totalSpent > 1000 && totalSpent <= 5000) {
+  discount = 0.05;
+  console.log(`You are the Silver partner with discount ${discount * 100}%`);
+} else if (totalSpent > 5000) {
+  discount = 0.1;
+  console.log(`You are the Gold partner with discount ${discount * 100}%`);
+} else {
+  discount = 0;
+  console.log(`You are not partner and your discount is ${discount * 100}%`);
+}
+
+if (totalSpent >= 100) {
+  console.log(
+    `We are arranging your purchase with total sum of ${
+      payment - payment * discount
+    } at discount ${discount * 100}%`
+  );
+} else {
+  console.log(`We are arranging your purchase with total sum of ${payment}`);
+}
+
+// let balance = 10000;
+// const payment = 52000;
+
+// console.log(
+//   `Overall sum of your purchase is ${payment}. Checking your balance...`
+// );
+
+// if (balance >= payment) {
+//   balance = balance - payment;
+//   console.log(`Purchase is done, your balance is ${balance}`);
+//   console.log("Purchase is complete");
+// } else {
+//   console.log("Sorry but your funds is not enough for this order!");
+// }
+
+// const subscription = "base";
+
+// console.log(
+//   `User have right subscription so enter is avaliable `,
+//   subscription === "pro" || subscription === "vip"
+// );
+
+// const x1 = 10;
+// const x2 = 20;
+// let userNumber = prompt("Enter some number");
+// userNumber = Number(userNumber);
+
+// console.log(`Number ${userNumber} includes before ${x1}`, userNumber < x1);
+
+// console.log(`Number ${userNumber} includes after ${x2}`, userNumber > x2);
+
+// console.log(
+//   `Number ${userNumber} includes from ${x1} to ${x2} `,
+//   userNumber >= x1 && userNumber <= x2
+// );
+
+// console.log(
+//   `Number ${userNumber} includes before ${x1} or after ${x2} `,
+//   userNumber < x1 || userNumber > x2
+// );
+// const firstName = "Mary";
+// const lastName = "Black";
+// const hotel = "Ritz";
+// const room = "5";
+
+// const message = `Guest ${firstName} ${lastName} settled in ${hotel} room number ${room}`;
+// const normalizedMessage = message.toLocaleLowerCase();
+// console.log(normalizedMessage);
+
+// const message =
+//   "Guest" +
+//   " " +
+//   firstName +
+//   " " +
+//   lastName +
+//   " " +
+//   "settle" +
+//   " " +
+//   "in" +
+//   " " +
+//   hotel +
+//   " " +
+//   "room number" +
+//   " " +
+//   room;
+// console.log(message);
+// const min = 10;
+// const max = 30;
+
+// const result = Math.random() * (max - min) + min;
+// const roundResult = Math.round(result);
+
+// console.log(roundResult);
+
 // alert("Я JavaScript");
 
-let arr = [2, 3, 4, 5];
-let result = 1;
-for (let i = 0; i < arr.length; i++) {
-  result *= arr[i];
-}
-console.log(result);
+// const num = prompt("Введите число");
+
+// const grade = prompt("Введите степень");
+
+// const result = num ** grade;
+
+// console.log(`${num} в ${grade} степени =`, result);
+
+// let arr = [2, 3, 4, 5];
+// let result = 1;
+// for (let i = 0; i < arr.length; i++) {
+//   result *= arr[i];
+// }
+// console.log(result);
 
 /* let string = "";
 cnt = 5;
