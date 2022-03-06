@@ -17,33 +17,97 @@
 
 // console.log("Can I open chat with this user? ", canOpenChat);
 
-const totalSpent = 1000;
-let payment = 500;
-let discount;
+// for (let i = 0; i < 101; i += 1) {
+//   console.log(i);
+// }
 
-if (totalSpent >= 100 && totalSpent <= 1000) {
-  discount = 0.02;
-  console.log(`You are the Bronze partner with discount ${discount * 100}%`);
-} else if (totalSpent > 1000 && totalSpent <= 5000) {
-  discount = 0.05;
-  console.log(`You are the Silver partner with discount ${discount * 100}%`);
-} else if (totalSpent > 5000) {
-  discount = 0.1;
-  console.log(`You are the Gold partner with discount ${discount * 100}%`);
-} else {
-  discount = 0;
-  console.log(`You are not partner and your discount is ${discount * 100}%`);
-}
+// for (let i = 1; i <= 20; i += 2) {
+//   console.log(i);
+// }
 
-if (totalSpent >= 100) {
-  console.log(
-    `We are arranging your purchase with total sum of ${
-      payment - payment * discount
-    } at discount ${discount * 100}%`
-  );
-} else {
-  console.log(`We are arranging your purchase with total sum of ${payment}`);
-}
+// // 1. обьявить переменные макс, мин и результат
+// const min = 1;
+// const max = 5;
+// let result = 0;
+// // 2. сделать цикл со счетчиком от мин до макс
+
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+
+//   result += i;
+// }
+
+// console.log(result);
+
+// 3. В цикле проверить остаток от деления на 2, если 0 то записать в результат, иное - пропустить
+
+// const employees = 5;
+
+// let totalSalary = 0;
+
+// for (let i = 1; i <= employees; i += 1) {
+//   const salary = Math.round(Math.random() * (5000 - 500) + 500);
+//   console.log(`Salary of ${i} employee is - ${salary}`);
+//   totalSalary += salary;
+// }
+
+// console.log(`Total salary of our employees is - ${totalSalary}`);
+
+// for (let i = 29; i > 0; i -= 2) {
+//   console.log(i);
+// }
+
+// const option = 1;
+// let message;
+
+// switch (option) {
+//   case 1:
+//     message = "You can take your order tomorrow after 12:00 in our office";
+//     break;
+
+//   case 2:
+//     message = "Courier bring your order tomorrow from 9:00 to 18:00";
+//     break;
+
+//   case 3:
+//     message = "Your order will be send today";
+//     break;
+
+//   default:
+//     message = "Manager recalls you later";
+// }
+
+// console.log(option);
+
+// const totalSpent = 1000;
+// let payment = 500;
+// let discount;
+
+// if (totalSpent >= 100 && totalSpent < 1000) {
+//   discount = 0.02;
+//   console.log(`You are the Bronze partner with discount ${discount * 100}%`);
+// } else if (totalSpent > 1000 && totalSpent <= 5000) {
+//   discount = 0.05;
+//   console.log(`You are the Silver partner with discount ${discount * 100}%`);
+// } else if (totalSpent > 5000) {
+//   discount = 0.1;
+//   console.log(`You are the Gold partner with discount ${discount * 100}%`);
+// } else {
+//   discount = 0;
+//   console.log(`You are not partner and your discount is ${discount * 100}%`);
+// }
+
+// if (totalSpent >= 100) {
+//   console.log(
+//     `We are arranging your purchase with total sum of ${
+//       payment - payment * discount
+//     } at discount ${discount * 100}%`
+//   );
+// } else {
+//   console.log(`We are arranging your purchase with total sum of ${payment}`);
+// }
 
 // let balance = 10000;
 // const payment = 52000;
