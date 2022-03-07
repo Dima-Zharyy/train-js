@@ -1,5 +1,55 @@
 "use strict";
 
+// const arr = [12, 12, 43, 45];
+
+// const newArr = arr.join(" ");
+
+// console.log(newArr);
+
+// const splitArr = newArr.split(" ");
+
+// console.log(splitArr);
+
+// const numbers = Number(splitArr[0]);
+// console.log(numbers);
+
+const girls = ["masha", "sasha", "glasha"];
+const boys = ["petya", "vasya", "fedya", "alex"];
+
+const boysGirls = boys.concat(girls);
+const girlsBoys = girls.concat(boys);
+
+console.log(boysGirls);
+console.log(girlsBoys);
+console.log("----------------");
+console.log(girls);
+console.log(boys);
+
+const equal = boysGirls.push("Dima") == 8;
+console.log(equal);
+
+console.log(boysGirls);
+
+const alexMasha = boysGirls.slice(3, 5);
+console.log(alexMasha);
+
+// const lang = ["c++", "python", "js", "kotlin"];
+
+// lang.splice(2, 2);
+
+// console.log(lang);
+// const arr = ["masha", "klasha", "vasha"];
+
+// console.log(arr.includes("smasha"));
+
+// const words = "Abra Cadabra";
+
+// const newArr = words.split(" ");
+
+// console.log(newArr);
+
+// console.log(words);
+
 // let firstNumber = prompt("Введите число");
 // firstNumber = Number(firstNumber);
 // let secondNumber = prompt("Введите степень");
