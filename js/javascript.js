@@ -1,5 +1,21 @@
 "use strict";
 
+const logins = ["d1mkaa123", "d1mkaa333", "d1mkaa111"];
+const loginToFind = "fedya13";
+
+logins.includes(loginToFind)
+  ? console.log(`login ${loginToFind} was found`)
+  : console.log("Ne naydeno");
+
+// for (const login of logins) {
+//   if (login === loginToFind) {
+//     console.log(`login ${loginToFind} was found`);
+//     break;
+//   }
+
+//   console.log("Posle breek eto ne vipolnitsya");
+// }
+
 // const arr = [12, 12, 43, 45];
 
 // const newArr = arr.join(" ");
@@ -13,25 +29,93 @@
 // const numbers = Number(splitArr[0]);
 // console.log(numbers);
 
-const girls = ["masha", "sasha", "glasha"];
-const boys = ["petya", "vasya", "fedya", "alex"];
+// const numbers = [1, 6, 8, 10, 12, 4, 1, 1, 30, 18, 1];
+// let sum = 0;
 
-const boysGirls = boys.concat(girls);
-const girlsBoys = girls.concat(boys);
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] % 2 !== 0) {
+//     sum += numbers[i];
+//   } else {
+//     continue;
+//   }
+// }
 
-console.log(boysGirls);
-console.log(girlsBoys);
-console.log("----------------");
-console.log(girls);
-console.log(boys);
+// for (const number of numbers) {
+//   if (number % 2 === 0) {
+//     continue;
+//   }
 
-const equal = boysGirls.push("Dima") == 8;
-console.log(equal);
+//   sum += number;
+// }
 
-console.log(boysGirls);
+// console.log(sum);
 
-const alexMasha = boysGirls.slice(3, 5);
-console.log(alexMasha);
+// const orders = [40, 20];
+
+// let totalSum = 0;
+
+// for (const order of orders) {
+//   totalSum += order;
+// }
+
+// // for (let i = 0; i < orders.length; i += 1) {
+// //   totalSum += orders[i];
+// // }
+
+// console.log(`Total sum of your purchase is ${totalSum}`);
+
+// const names = ["olya", "pasha", "glasha", "fedya", "petya"];
+
+// names[15] = "qweqweqwe";
+// console.log(names);
+
+// names.push("new name KOLYA");
+
+// console.log(names[17]);
+
+// names.splice(5, 10);
+
+// console.log(names);
+
+// for (const name of names) {
+//   console.log(`You see this name ${name}`);
+// }
+
+// // for (let i = 0; i < names.length; i += 1) {
+//   console.log(`Name ${names[i]} installed`);
+// }
+
+// const numbers = ["one", "two", "three", "four"];
+// const numberToFind = "three";
+
+// for (const number of numbers) {
+//   if (number === numberToFind) {
+//     console.log(`${numberToFind} is found`);
+//     break;
+//   }
+
+//   console.log(`${numberToFind} is not found`);
+// }
+
+// const girls = ["masha", "sasha", "glasha"];
+// const boys = ["petya", "vasya", "fedya", "alex"];
+
+// const boysGirls = boys.concat(girls);
+// const girlsBoys = girls.concat(boys);
+
+// console.log(boysGirls);
+// console.log(girlsBoys);
+// console.log("----------------");
+// console.log(girls);
+// console.log(boys);
+
+// const equal = boysGirls.push("Dima") == 8;
+// console.log(equal);
+
+// console.log(boysGirls);
+
+// const alexMasha = boysGirls.slice(3, 5);
+// console.log(alexMasha);
 
 // const lang = ["c++", "python", "js", "kotlin"];
 
