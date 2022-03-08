@@ -1,11 +1,118 @@
 "use strict";
 
-const logins = ["d1mkaa123", "d1mkaa333", "d1mkaa111"];
-const loginToFind = "fedya13";
+const cards = ["card-1", "card-2", "card-3", "card-4", "card-5"];
 
-logins.includes(loginToFind)
-  ? console.log(`login ${loginToFind} was found`)
-  : console.log("Ne naydeno");
+// cards.splice(cards.length, 0, "card-6");
+
+cards.splice(cards.indexOf("card-2"), 1, "cards-222222");
+
+console.log(cards);
+
+// const numbers1 = [5, 5, 10, 10];
+// const numbers2 = [1, 1, 2, 2];
+
+// const numbers = numbers1.concat(numbers2);
+// let result = 0;
+
+// for (const number of numbers) {
+//   result += number;
+// }
+
+// console.log(numbers);
+// console.log("Sum of two arrays is: ", result);
+
+// const title = "Top 10 benefits of React Framework";
+// // const titleNormalized = title.toLowerCase();
+// // const splitedTitle = titleNormalized.split(" ");
+
+// // const slugTitle = splitedTitle.join("-");
+
+// const slug = title.toLocaleLowerCase().split(" ").join("-");
+// console.log(slug);
+
+// console.log(slugTitle);
+// let splitedTitleSlug = "";
+
+// for (const word of splitedTitle) {
+//   splitedTitleSlug += `${word}-`;
+// }
+
+// const splitedTitleSlugNorm = splitedTitleSlug.slice(
+//   0,
+//   splitedTitleSlug.length - 1
+// );
+
+// console.log(splitedTitleSlug)
+
+// console.log(splitedTitleSlugNorm);
+
+// const string = "DimaZharyy";
+// const splittedString = string.split("");
+// let reversedString = "";
+
+// // for (const letter of splittedString) {
+// //   if (letter === letter.toLowerCase()) {
+// //     reversedString += letter.toUpperCase();
+// //   } else reversedString += letter.toLowerCase();
+// // }
+
+// for (const letter of splittedString) {
+//   letter === letter.toLocaleLowerCase()
+//     ? (reversedString += letter.toLocaleUpperCase())
+//     : (reversedString += letter.toLocaleLowerCase());
+// }
+
+// console.log(reversedString);
+
+// const friends = ["Dima", "Borya", "Fedya", "Zhora"];
+
+// let joinedFriends = "";
+
+// for (const friend of friends) {
+//   joinedFriends += `${friend}, `;
+// }
+
+// joinedFriends = joinedFriends.slice(0, joinedFriends.length - 2);
+
+// console.log(joinedFriends);
+// const joinFriends = friends.join(", ");
+
+// console.log(joinFriends);
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let biggestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number > biggestNumber) {
+//     biggestNumber = number;
+//   }
+// }
+
+// console.log("The biggestNumber is: ", biggestNumber);
+
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
+
+// // for (let i = 1; i < numbers.length; i += 1) {
+// //   if (numbers[i] > smallestNumber) {
+// //     continue;
+// //   } else {
+// //     smallestNumber = numbers[i];
+// //   }
+// // }
+// console.log(smallestNumber);
+
+// const logins = ["d1mkaa123", "d1mkaa333", "d1mkaa111", "fedya13"];
+// const loginToFind = "fedya13";
+
+// logins.includes(loginToFind)
+//   ? console.log(`login ${loginToFind} was found`)
+//   : console.log("Ne naydeno");
 
 // for (const login of logins) {
 //   if (login === loginToFind) {
