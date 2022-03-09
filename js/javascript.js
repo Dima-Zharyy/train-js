@@ -1,12 +1,98 @@
 "use strict";
 
-const cards = ["card-1", "card-2", "card-3", "card-4", "card-5"];
+const listOfLogins = ["d1mkaa91", "zherj", "kabu", "litrom"];
 
-// cards.splice(cards.length, 0, "card-6");
+const findLogin = function (logins, loginToFind) {
+  for (const login of logins) {
+    if (login === loginToFind) {
+      return `User ${loginToFind} was found`;
+    }
+  }
+  return `User ${loginToFind} was not found`;
+};
 
-cards.splice(cards.indexOf("card-2"), 1, "cards-222222");
+console.log(findLogin(listOfLogins, "kabu"));
+// const findLogin = function (logins, loginToFind) {
+//   logins.includes(loginToFind)
+//     ? console.log(`User ${loginToFind} was found`)
+//     : console.log(`User ${loginToFind} was not found`);
+// };
 
-console.log(cards);
+// findLogin(listOfLogins, "123123u");
+
+// const array = [1, 2, 4, 5, 6, 7, 8];
+
+// const logItems = function (arr) {
+//   for (const item of arr) {
+//     console.log(item);
+//   }
+// };
+
+// logItems(array);
+
+// // const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90];
+// const random1 = [1, 5];
+
+// const sum = function (array) {
+//   let total = 0;
+//   for (const number of array) {
+//     total += number;
+//   }
+//   return total;
+// };
+
+// // console.log(sum(cart));
+// console.log(sum(random1));
+
+// function fnA() {
+//   console.log("Лог внуртри функции fnA до вызова fnB");
+//   fnB();
+//   console.log("Лог внуртри функции fnA после вызова fnB");
+// }
+
+// function fnB() {
+//   console.log("Лог внутри функции fnB");
+// }
+
+// console.log("Лог перед вызовом fnA");
+// fnA();
+// console.log("Лог после вызова fnA");
+
+// function1(0, 1, 1, 1, 1, 1, 1);
+
+// const function1 = function (...args) {
+//   console.log(args);
+// };
+
+// function1(1, 2, 3);
+
+// function cycle(countFrom = 1, countTo = 10, step = 1) {
+//   for (let i = countFrom; i <= countTo; i += step) {
+//     console.log(i);
+//   }
+// }
+
+// cycle(5, 15, 2);
+
+// for (let i = 1; i <= 100; i += 1) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// const cards = ["card-1", "card-2", "card-3", "card-4", "card-5"];
+
+// // cards.splice(cards.length, 0, "card-6");
+
+// cards.splice(cards.indexOf("card-2"), 1, "cards-222222");
+
+// console.log(cards);
 
 // const numbers1 = [5, 5, 10, 10];
 // const numbers2 = [1, 1, 2, 2];
