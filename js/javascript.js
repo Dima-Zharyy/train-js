@@ -1,17 +1,123 @@
 "use strict";
 
-const listOfLogins = ["d1mkaa91", "zherj", "kabu", "litrom"];
+const filterNumbers = function (numbers, ...args) {
+  const result = [];
 
-const findLogin = function (logins, loginToFind) {
-  for (const login of logins) {
-    if (login === loginToFind) {
-      return `User ${loginToFind} was found`;
+  for (const number of numbers) {
+    if (args.includes(number)) {
+      result.push(number);
     }
   }
-  return `User ${loginToFind} was not found`;
+
+  return console.log(result);
 };
 
-console.log(findLogin(listOfLogins, "kabu"));
+// const filterNumbers = function (numbers, ...args) {
+//   const result = [];
+
+//   for (const number of numbers) {
+//     for (const arg of args) {
+//       if (arg === number) {
+//         result.push(number);
+//       }
+//     }
+//   }
+
+//   return console.log(result);
+// };
+
+filterNumbers([5, 12, 56, 84, 95, 15, 952], 56, 99, 50, 12, 20, 30, 40);
+
+// const fn = function (...items) {
+//   let result = 0;
+
+//   for (const item of items) {
+//     result += item;
+//   }
+
+//   return console.log(result);
+// };
+
+// const fn = function () {
+//   const arr = Array.from(arguments);
+//   let result = 0;
+//   for (const item of arr) {
+//     result += item;
+//   }
+//   return console.log(result);
+// };
+
+// fn(2, 3);
+
+// const arrayOfNumbers = [1, 3, 6];
+
+// const multiply = function (numbers) {
+//   let sum = 0;
+
+//   for (const number of numbers) {
+//     sum += number;
+//   }
+
+//   return sum;
+// };
+
+// console.log(multiply(arrayOfNumbers));
+
+// const title = "Top 10 benefits of React Framework";
+
+// const slugTitle = function (sentence) {
+//   // const normalizedSentence = sentence.toLowerCase();
+//   // const words = normalizedSentence.split(" ");
+//   // return words.join("-");
+
+//   return sentence.toLowerCase().split(" ").join("-");
+// };
+
+// console.log(slugTitle(title));
+
+// const name1 = "DimaZharyy";
+
+// const reversedString = function (string) {
+//   const splittedString = string.split("");
+//   let reversed = "";
+
+//   for (const letter of splittedString) {
+//     letter === letter.toUpperCase()
+//       ? (reversed += letter.toLowerCase())
+//       : (reversed += letter.toUpperCase());
+//   }
+
+//   return reversed;
+// };
+
+// console.log(reversedString(name1));
+
+// const numbers = [454, 6545, 848, 5141, 51, 84, 4584, 221];
+
+// const smallestNumber = function (numbers) {
+//   let seekNumber = numbers[0];
+//   for (const number of numbers) {
+//     if (number < seekNumber) {
+//       seekNumber = number;
+//     }
+//   }
+//   return seekNumber;
+// };
+
+// console.log(smallestNumber(numbers));
+
+// const listOfLogins = ["d1mkaa91", "zherj", "kabu", "litrom"];
+
+// const findLogin = function (logins, loginToFind) {
+//   for (const login of logins) {
+//     if (login === loginToFind) {
+//       return `User ${loginToFind} was found`;
+//     }
+//   }
+//   return `User ${loginToFind} was not found`;
+// };
+
+// console.log(findLogin(listOfLogins, "kabu"));
 // const findLogin = function (logins, loginToFind) {
 //   logins.includes(loginToFind)
 //     ? console.log(`User ${loginToFind} was found`)
