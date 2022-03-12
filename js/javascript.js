@@ -1,16 +1,76 @@
 "use strict";
 
-const filterNumbers = function (numbers, ...args) {
-  const result = [];
+// const values = [2, 1];
 
-  for (const number of numbers) {
-    if (args.includes(number)) {
-      result.push(number);
-    }
-  }
+// const arr = values.sort();
+// const newArr = [...new Set(arr)];
+// const result = newArr.join("");
+// const smallest = Number(result);
 
-  return console.log(result);
-};
+// console.log(newArr);
+// console.log(result);
+// console.log(smallest);
+// let a = 10;
+// let b = -20;
+
+// console.log(a + b);
+
+// const word = "efEfdQssQ";
+
+// const result = [];
+
+// for (const letter of word) {
+//   if (letter === letter.toUpperCase) {
+//     result.push(word.indexOf(letter));
+//   }
+// }
+
+// console.log(result);
+
+// let s = "qwe wetgsd wefsdfsdfd we wer dsdfsdf";
+
+// const arr = s.split(" ");
+// let result = [];
+
+// for (const word of arr) {
+//   result.push(word.length);
+// }
+
+// console.log(result);
+
+// console.log(Math.min(юююresult));
+
+// let s1 = "asglsdfkkdglm";
+// let s2 = "sdokofsqsdkfaaaa";
+
+// let string1 = s1.split("");
+// let string2 = s2.split("");
+
+// const arr = string1.concat(string2);
+
+// const result = new Set(arr);
+
+// console.log(result);
+
+// function longest(s1, s2) {
+//   const arr = [s1, s2].split("");
+//   arr = arr.sort();
+
+//   for (const letter of arr) {
+//   }
+// }
+
+// const filterNumbers = function (numbers, ...args) {
+//   const result = [];
+
+//   for (const number of numbers) {
+//     if (args.includes(number)) {
+//       result.push(number);
+//     }
+//   }
+
+//   return console.log(result);
+// };
 
 // const filterNumbers = function (numbers, ...args) {
 //   const result = [];
@@ -26,7 +86,7 @@ const filterNumbers = function (numbers, ...args) {
 //   return console.log(result);
 // };
 
-filterNumbers([5, 12, 56, 84, 95, 15, 952], 56, 99, 50, 12, 20, 30, 40);
+// filterNumbers([5, 12, 56, 84, 95, 15, 952], 56, 99, 50, 12, 20, 30, 40);
 
 // const fn = function (...items) {
 //   let result = 0;
