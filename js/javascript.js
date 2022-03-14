@@ -1,5 +1,238 @@
 "use strict";
 
+const friends = [
+  { name: "Dima", online: false },
+  { name: "Alyona", online: true },
+  { name: "Sergo", online: true },
+  { name: "Vika", online: false },
+];
+
+const getFriendsByOnlineStatus = function (allFriends) {
+  const online = [];
+  const ofline = [];
+
+  for (const friend of allFriends) {
+    if (friend.online) {
+      online.push(friend);
+    } else {
+      ofline.push(friend);
+    }
+  }
+  return console.log({
+    online,
+    ofline,
+  });
+};
+
+getFriendsByOnlineStatus(friends);
+
+// const getOnlineFriends = function (allfriends) {
+//   const result = [];
+
+//   for (const friend of allfriends) {
+//     if (friend.online) {
+//       result.push(friend);
+//     }
+//   }
+
+//   return console.log(result);
+// };
+
+// getOnlineFriends(friends);
+
+// const getOflineFriends = function (allfriends) {
+//   const result = [];
+
+//   for (const friend of allfriends) {
+//     if (!friend.online) {
+//       result.push(friend);
+//     }
+//   }
+
+//   return console.log(result);
+// };
+
+// getOflineFriends(friends);
+// const getAllNames = function (allFriends) {
+//   const result = [];
+//   for (let i = 1; i < allFriends.length; i += 1) {
+//     result.push(allFriends[i].name);
+//   }
+//   return result;
+// };
+
+// const getAllNames = function (allFriends) {
+//   const result = [];
+//   for (const friend of allFriends) {
+//     result.push(friend.name);
+//   }
+//   return result;
+// };
+
+// console.log(getAllNames(friends));
+
+// const findFriendByName = function (allFriends, name) {
+//   for (const friend of allFriends) {
+//     if (Object.values(friend).includes(name)) {
+//       return console.log("YES! We find it");
+//     }
+//   }
+
+//   return console.log("Sorry! There is no friend with this name");
+// };
+
+// const findFriendByName = function (allFriends, name) {
+//   for (const friend of allFriends) {
+//     if (friend.name === name) {
+//       return console.log(`We find ${name}`);
+//     }
+//   }
+//   return console.log(`We are not find friend with name: ${name}`);
+// };
+
+// findFriendByName(friends, "Dima");
+
+// console.table(friends);
+
+// const whoIsOnline = function () {
+//   for (const friend of friends) {
+//     if (friend.online === true) {
+//       console.log(friend.name);
+//     }
+//   }
+// };
+
+// whoIsOnline();
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+
+// console.log();
+
+// const keys = Object.keys(feedback);
+// const values = Object.values(feedback);
+
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${feedback[key]} `);
+// }
+
+// for (const value of values) {
+//   console.log(value);
+// }
+
+// const entries = Object.entries(feedback);
+// console.log(entries);
+
+// const playList = {
+//   name: "Limp Bizkit",
+//   rating: 9.45,
+//   tracks: ["Surround", "Pay", "Happy", "Milk"],
+//   // trackQuantity: 4,
+//   // tracksQuantity: this.tracks.length,
+//   changeName(a) {
+//     this.name = a;
+//   },
+//   updateRating(b) {
+//     this.rating = b;
+//   },
+//   addTrack(c) {
+//     this.tracks.push(c);
+//     this.trackQuantity = this.tracks.length;
+//   },
+//   getTrackQuantity() {
+//     return this.tracks.length;
+//   },
+// };
+
+// playList.changeName("Okean Elzi");
+// playList.updateRating(100);
+// playList.addTrack("New Track !!!");
+
+// console.log(playList);
+// console.log(playList.getTrackQuantity());
+
+// var a = 10;
+
+// if (a % 3 === 0) {
+//   const i = 10;
+// }
+
+// console.log(i);
+
+// let a = "1" + " " + false + " " + "that is all";
+
+// console.log(a);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "На берегу спокойных вод",
+//     author: "Роберт Шекли",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "Сон смешного человека",
+//     author: "Федор Достоевский",
+//     rating: 7.75,
+//   },
+// ];
+
+// let i = 0;
+
+// for (const book of books) {
+//   i += book.rating;
+// }
+
+// let result = Number((i / books.length).toFixed(2));
+
+// console.log(result);
+
+// var s1 = [
+//   "hoqq",
+//   "bbllkw",
+//   "oox",
+//   "ejjuyyy",
+//   "plmiis",
+//   "xxxzgpsssa",
+//   "xxwwkktt",
+//   "znnnnfqknaz",
+//   "qqquuhii",
+//   "dvvvwz",
+// ];
+// var s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
+
+// function mxdiflg(a1, a2) {
+//   const lastIndexOfA1 = a1.length - 1;
+//   const lastIndexOfA2 = a2.length - 1;
+//   let randomIndexA1 = Math.round(Math.random() * lastIndexOfA1);
+//   let randomIndexA2 = Math.round(Math.random() * lastIndexOfA2);
+
+//   const randomStringA1 = a1[randomIndexA1];
+//   const randomStringA2 = a1[randomIndexA2];
+
+//   const result = randomStringA1.length - randomStringA2.length;
+
+//   if (a1 === null || a2 === null) {
+//     return -1;
+//   }
+//   return Math.abs(result);
+
+//   // your code
+// }
+
+// console.log(mxdiflg(s1, s2));
+
+// console.log(mxdiflg(s1, s2));
+
 //
 // const values = [2, 1];
 
