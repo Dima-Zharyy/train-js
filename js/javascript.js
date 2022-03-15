@@ -1,30 +1,30 @@
 "use strict";
 
-const friends = [
-  { name: "Dima", online: false },
-  { name: "Alyona", online: true },
-  { name: "Sergo", online: true },
-  { name: "Vika", online: false },
-];
+// const friends = [
+//   { name: "Dima", online: false },
+//   { name: "Alyona", online: true },
+//   { name: "Sergo", online: true },
+//   { name: "Vika", online: false },
+// ];
 
-const getFriendsByOnlineStatus = function (allFriends) {
-  const online = [];
-  const ofline = [];
+// const getFriendsByOnlineStatus = function (allFriends) {
+//   const online = [];
+//   const ofline = [];
 
-  for (const friend of allFriends) {
-    if (friend.online) {
-      online.push(friend);
-    } else {
-      ofline.push(friend);
-    }
-  }
-  return console.log({
-    online,
-    ofline,
-  });
-};
+//   for (const friend of allFriends) {
+//     if (friend.online) {
+//       online.push(friend);
+//     } else {
+//       ofline.push(friend);
+//     }
+//   }
+//   return console.log({
+//     online,
+//     ofline,
+//   });
+// };
 
-getFriendsByOnlineStatus(friends);
+// getFriendsByOnlineStatus(friends);
 
 // const getOnlineFriends = function (allfriends) {
 //   const result = [];
