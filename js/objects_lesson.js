@@ -1,20 +1,77 @@
 "use strict";
 
-const profile = {
-  name: "Dima Zharyy",
-  tag: "d1mkaa",
-  location: "Poltava, Ukraine",
-  avatar: false,
-  stats: {
-    folowers: 4502,
-    views: 1233,
-    likes: 133,
+const userInfo = {
+  name: "Vasya",
+  age: 30,
+  showInfo() {
+    console.log(`${this.name}`);
   },
 };
 
-const { name, location, ...restProps } = profile;
+const user = userInfo;
 
-console.log(restProps);
+console.log(user === userInfo);
+
+// const profile = {
+//   name: "Dima Zharyy",
+//   tag: "d1mkaa",
+//   location: "Poltava, Ukraine",
+//   avatar: false,
+//   stats: {
+//     folowers: 4502,
+//     views: 1233,
+//     likes: 133,
+//   },
+// };
+
+// const showProfileInfo = function (userProfile) {
+//   const {
+//     name,
+//     tag,
+//     stats: { folowers, views, likes },
+//     location,
+//     avatar,
+//   } = userProfile;
+
+//   console.log(name, tag, folowers);
+// };
+
+// showProfileInfo(profile);
+
+// const minMaxNumbers = {
+//   max(array) {
+//     return Math.max(...array);
+//   },
+//   min(array) {
+//     return Math.min(...array);
+//   },
+// };
+
+// console.log(Number);
+
+// const numbers = [2342, 242, 34, 11, 1, 4, 555];
+
+// const findMaxNumber = function (array) {
+//   return Math.max(...array);
+// };
+
+// console.log(findMaxNumber(numbers));
+
+// const profile = {
+//   name: "Dima Zharyy",
+//   tag: "d1mkaa",
+//   location: "Poltava, Ukraine",
+//   avatar: false,
+//   stats: {
+//     folowers: 4502,
+//     views: 1233,
+//     likes: 133,
+//   },
+// };
+
+// const { name, location, ...restProps } = profile;
+
+// console.log(restProps);
 
 // const rgb = [255, 100, 80];
 
