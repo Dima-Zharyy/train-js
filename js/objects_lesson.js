@@ -1,7 +1,253 @@
 "use strict";
 
+// const players = [
+//   { id: "id-1", tag: "Mango", isOnline: true, rank: 800 },
+//   { id: "id-2", tag: "Poly", isOnline: false, rank: 600 },
+//   { id: "id-3", tag: "Ajax", isOnline: true, rank: 100 },
+//   { id: "id-4", tag: "Kiwi", isOnline: true, rank: 400 },
+// ];
 
+// // const totalRank = Object.values(players.map((player) => player.rank)).reduce(
+// //   (total, rank) => total + rank
+// // );
 
+// const totalRank = players.reduce((total, player) => total + player.rank, 0);
+
+// console.log(totalRank);
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+const allTags = tweets.reduce((acc, item) => [...acc, ...item.tags], []);
+
+const statistic = allTags.reduce(
+  (acc, item) => (acc[item] ? (acc[item] += 1) : (acc[item] = 1)),
+  {}
+);
+
+console.log(statistic);
+
+// console.log(allTags);
+
+// const cart = [
+//   { label: "Apples", price: 100, quantity: 2 },
+//   { label: "Bananas", price: 120, quantity: 3 },
+//   { label: "Lemons", price: 70, quantity: 4 },
+// ];
+
+// const totalSum = cart.reduce(
+//   (total, item) => total + item.price * item.quantity,
+//   0
+// );
+
+// console.log(totalSum);
+
+// const salary = {
+//   mango: 100,
+//   mimi: 200,
+//   feo: 150,
+// };
+
+// const totalSalary = Object.values(salary).reduce(
+//   (total, number) => total + number,
+//   0
+// );
+
+// console.log(totalSalary);
+
+// const players = [
+//   { id: "id-1", tag: "Mango", isOnline: true, rank: 800 },
+//   { id: "id-2", tag: "Poly", isOnline: false, rank: 600 },
+//   { id: "id-3", tag: "Ajax", isOnline: true, rank: 100 },
+//   { id: "id-4", tag: "Kiwi", isOnline: true, rank: 400 },
+// ];
+
+// const haveI = players.every((player) => player.rank > 110);
+// console.log(haveI);
+
+// const findMango = players.find((player) => player.tag === "Ajax");
+// console.log(findMango);
+
+// const numbers = [4, 56, 4, 356, 345, 345, 3234];
+
+// const biggerThanThousand = numbers.filter((number) => number > 1000);
+// console.log(Number(numbers));
+
+// const players = [
+//   { id: "id-1", tag: "Mango", isOnline: true, rank: 800 },
+//   { id: "id-2", tag: "Poly", isOnline: false, rank: 600 },
+//   { id: "id-3", tag: "Ajax", isOnline: true, rank: 100 },
+//   { id: "id-4", tag: "Kiwi", isOnline: true, rank: 400 },
+// ];
+
+// const onlineAndSorted = players
+//   .filter((player) => player.isOnline)
+//   .sort((prevPlayer, nextPlayer) => prevPlayer.rank - nextPlayer.rank);
+
+// console.log(onlineAndSorted);
+
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+//   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
+//   { id: "player-3", name: "Ajax", timePlayed: 230, points: 48, online: true },
+//   { id: "player-4", name: "Kiwi", timePlayed: 150, points: 71, online: false },
+//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
+// ];
+
+// const a = "Poly";
+// // const newArr = players.map((player) => player.name);
+// const player_2_Viki = players.map((player) =>
+//   player.name === a ? { ...player, name: "Viki" } : player
+// );
+
+// // const isOnline = players.filter((player) => player.timePlayed > 400);
+
+// // console.log(isOnline);
+// console.log(player_2_Viki);
+// console.log(players);
+
+// const filteredByOnline = players.filter((player) => player.online);
+// const filteredAndSortedOflineByName = players
+//   .filter((player) => !player.online)
+//   .sort((a, b) => b.points - a.points);
+
+// console.log(filteredAndSortedOflineByName);
+
+// console.log(filteredByOnline);
+
+// const add = function (a, b, c) {
+//   return a + b + c;
+// };
+
+// const numbers = [1, 5, 2, 4, 3];
+
+// const greaterThenTwo = numbers.filter((num) => num > 2);
+
+// console.log(greaterThenTwo);
+
+// const multiplyByThree = greaterThenTwo.map((num) => num * 3);
+// console.log(multiplyByThree);
+
+// const sorted = multiplyByThree.sort((a, b) => a - b);
+// console.log(sorted);
+
+// const res = numbers
+//   .filter((num) => num > 2)
+//   .map((num) => num * 3)
+//   .sort((a, b) => a - b);
+
+// console.log(res);
+
+// const add = (a, b, c) => a + b + c;
+
+// console.log(add(4, 5, 3));
+
+// const hello = (name) => console.log(`Hello ${name}`);
+
+// hello("Dima");
+// const arr = [1, 2, 4, 5, 6, 7, 8];
+
+// const filter = function (array, callback) {
+//   const result = [];
+
+//   for (const item of array) {
+//     const passed = callback(item);
+//     if (passed) {
+//       result.push(item);
+//     }
+//   }
+
+//   return console.log(result);
+// };
+
+// const setting = function (a) {
+//   return a > 2;
+// };
+
+// filter(arr, (a) => a > 7);
+
+// const fruits = [
+//   { name: "apples", quantity: 200, isFresh: true },
+//   { name: "grapes", quantity: 150, isFresh: false },
+//   { name: "bananas", quantity: 100, isFresh: true },
+// ];
+
+// filter(fruits, (a) => a.isFresh === false);
+
+// const fnA = function (message, callback, number) {
+//   console.log(message);
+//   callback(number);
+// };
+
+// const fnB = function (num) {
+//   console.log(`This is function B with output: ${num}`);
+// };
+
+// fnA("1st Function", fnB, 150);
+
+// const doMath = function (a, b, callback) {
+//   const result = callback(a, b);
+//   console.log(result);
+// };
+
+// const add = function (a, b) {
+//   return a + b;
+// };
+
+// const subtract = function (a, b) {
+//   return a - b;
+// };
+
+// const divide = function (a, b) {
+//   return a / b;
+// };
+
+// const multiply = function (a, b) {
+//   return a * b;
+// };
+
+// doMath(4, 5, add);
+
+// const greet = () => {
+//   console.log("Welcome to Raddison");
+// };
+
+// greet();
+
+// const guestName = (surname) => {
+//   console.log(`The Guest name is: ${surname}`);
+// };
+
+// guestName("Dima");
+
+// const add = (a, b) => {
+//   console.log(`The sum of ${a} and ${b} is: ${a + b}`);
+// };
+
+// add(3, 5);
+
+// const message = (a, b) => {
+//   console.log(`First setting is: ${a}`);
+//   console.log(`Second setting is: ${b}`);
+// };
+
+// message(3, 5);
+
+// const fn = function (name) {
+//   console.log(`Гость ${name} успешно зарегистрирован`);
+// };
+
+// const fn_1 = function (surname, callback) {
+//   console.log(`Регистрируем гостя ${surname}.`);
+//   callback(surname);
+// };
+
+// fn_1("Dima Zharyy", fn);
 
 // const atTheOldToad = {
 //   potions: [
