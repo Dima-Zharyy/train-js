@@ -1,4 +1,92 @@
-"use strict";
+'use strict';
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const tags = tweets.reduce((allTags, { tags }) => [...allTags, ...tags], []);
+// console.log(tags);
+
+// const stats = tags.reduce((stat, tag) => {
+//   stat[tag] ? (stat[tag] += 1) : (stat[tag] = 1);
+//   return stat;
+// }, {});
+
+// console.log(stats);
+
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
+
+// const totalSum = cart.reduce(
+//   (total, { price, quantity }) => total + price * quantity,
+//   0
+// );
+
+// console.log(totalSum);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const total = numbers.reduce((acc, number) => acc + number, 0);
+// // console.log(total);
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150,
+// };
+
+// const totalSalary = Object.values(salary).reduce(
+//   (total, employee) => total + employee,
+//   0
+// );
+// console.log(totalSalary);
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Ajax', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Kiwi', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+// ];
+
+// const totalTime = players.reduce(
+//   (total, { timePlayed }) => total + timePlayed,
+//   0
+// );
+// console.log(totalTime);
+
+// console.log(0.1 + 0.2 === 0.3);
+
+// const arr = [1, 2, 3, 4, 5];
+// const result = [];
+
+// arr.forEach((x) => result.push(x * 2));
+// console.log(result);
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const allTags = tweets.map((player) => player.tags).flat();
+// console.log(allTags);
+
+// const stats = allTags.reduce((acc, tag) => {
+//   acc[tag] ? (acc[tag] += 1) : (acc[tag] = 1);
+//   return acc;
+// }, {});
+
+// console.log(stats);
 
 // const players = [
 //   { id: "id-1", tag: "Mango", isOnline: true, rank: 800 },
@@ -15,22 +103,110 @@
 
 // console.log(totalRank);
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const cart = [
+//   { label: "Apples", price: 100, quantity: 2 },
+//   { label: "Bananas", price: 120, quantity: 3 },
+//   { label: "Lemons", price: 70, quantity: 4 },
+// ];
 
-const allTags = tweets.reduce((acc, item) => [...acc, ...item.tags], []);
+// const totalSum = cart.reduce(
+//   (total, { price, quantity }) => total + price * quantity,
+//   0
+// );
 
-const statistic = allTags.reduce(
-  (acc, item) => (acc[item] ? (acc[item] += 1) : (acc[item] = 1)),
-  {}
-);
+// console.log(totalSum);
 
-console.log(statistic);
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+//   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
+//   { id: "player-3", name: "Ajax", timePlayed: 230, points: 48, online: true },
+//   { id: "player-4", name: "Kiwi", timePlayed: 150, points: 71, online: false },
+//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
+// ];
+
+// const totalTimePlayed = players.reduce(
+//   (acc, player) => acc + player.timePlayed,
+//   0
+// );
+
+// console.log(totalTimePlayed);
+
+// const isAllPlayersOnline = players.every((player) => player.online);
+// console.log(isAllPlayersOnline);
+
+// const isAnyPlayerOnline = players.some((player) => player.online);
+// console.log(isAnyPlayerOnline);
+
+// const playerToFind = "player-5";
+// const findPlayerFive = players.find((player) => player.id === playerToFind);
+// console.log(findPlayerFive);
+
+// const playerNameToFind = "Poly";
+// const findByName = players.find((player) => player.name === playerNameToFind);
+// console.log(findByName);
+
+// const findByName = (allPlayers, playerToFind) =>
+//   console.log(allPlayers.find((player) => player.name === playerToFind));
+
+// findByName(players, "Ajax");
+
+// const timeHigherThanTwoHundred = players.filter(
+//   (player) => player.timePlayed > 200
+// );
+
+// console.log(timeHigherThanTwoHundred);
+
+// const increaseTimeByTenPercent = players.map((player) => ({
+//   ...player,
+//   timePlayed: Number((player.timePlayed * 1.1).toFixed(0)),
+// }));
+
+// console.log(increaseTimeByTenPercent);
+
+// const increaseTimePlayerFour = players.map((player) =>
+//   player.id === "player-4"
+//     ? { ...player, timePlayed: player.timePlayed + 1000 }
+//     : player
+// );
+
+// console.log(increaseTimePlayerFour);
+// const names = players.map(({ name, online }) => ({
+//   name,
+//   online,
+// }));
+
+// console.log(names);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const multiplyByThree = numbers.map((number) => number * 3);
+
+// console.log(multiplyByThree);
+
+// const someObj = { a: 4 };
+
+// const arr = [];
+// const multiplyByThree = numbers.forEach((x) => arr.push(x * 3), someObj);
+
+// console.log(arr);
+// console.log(multiplyByThree);
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const allTags = tweets.reduce((acc, item) => [...acc, ...item.tags], []);
+
+// const statistic = allTags.reduce(
+//   (acc, item) => (acc[item] ? (acc[item] += 1) : (acc[item] = 1)),
+//   {}
+// );
+
+// console.log(statistic);
 
 // console.log(allTags);
 
