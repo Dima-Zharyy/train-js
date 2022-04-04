@@ -1,5 +1,78 @@
 'use strict';
 
+// const players = [
+//   { id: 'id-1', tag: 'Mango', isOnline: true, rank: 800 },
+//   { id: 'id-2', tag: 'Poly', isOnline: false, rank: 600 },
+//   { id: 'id-3', tag: 'Ajax', isOnline: true, rank: 100 },
+//   { id: 'id-4', tag: 'Kiwi', isOnline: true, rank: 400 },
+// ];
+
+// const topOnlinePlayers = players
+//   .filter(a => a.isOnline)
+//   .sort((a, b) => b.rank - a.rank);
+// console.log(topOnlinePlayers);
+
+// const numbers = [1, 5, 2, 4, 3];
+
+// const result = numbers
+//   .map(a => a * 3)
+//   .filter(a => a > 10)
+//   .sort((a, b) => a - b);
+// console.log(result);
+
+// const arr = [1, 2, [4, [5]], [6, [7, 8, [9]]]];
+// const spread = arr.flat();
+
+// console.log(spread);
+// console.table(arr);
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// // const tags = tweets.map(a => a.tags).flat();
+// const tags = tweets.flatMap(a => a.tags);
+
+// // const tags = tweets.reduce((allTags, { tags }) => [...allTags, ...tags], []);
+// console.log(tags);
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Ajax', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Kiwi', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+// ];
+
+// const sortedByTime = [...players].sort((a, b) => {
+//   if (a.name.charCodeAt(0) === b.name.charCodeAt(0)) {
+//     return 0;
+//   } else if (a.name.charCodeAt(0) > b.name.charCodeAt(0)) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
+
+// console.log(sortedByTime);
+
+// const numbers = [9, 1, 16, 2, 3];
+// const sortedNumbers = [...numbers].sort((a, b) => b - a);
+// console.log(sortedNumbers);
+// console.log(numbers);
+
+// const letters = ['c', 's', 'A', 'a', 'a'];
+// const sortedLetters = letters.sort((a, b) => a - b);
+// console.log(sortedLetters);
+// console.log(letters);
+
+// const numbersBiggerThanEight = numbers.filter(number => number > 8);
+// console.log(numbersBiggerThanEight);
+
 // const tweets = [
 //   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
 //   { id: '001', likes: 2, tags: ['html', 'css'] },
