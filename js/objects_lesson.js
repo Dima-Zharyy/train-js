@@ -1,5 +1,77 @@
 'use strict';
 
+// const str = 'Reverse this string, please!';
+// const arr = str.split(' ');
+// const reversed = arr[0].split('').reverse().join('');
+// console.log(reversed);
+
+// function nbMonths(
+//   startPriceOld,
+//   startPriceNew,
+//   savingperMonth,
+//   percentLossByMonth
+// ) {
+//   let oldCar = startPriceOld;
+//   let newCar = startPriceNew;
+//   let saved = 0;
+//   let percent = percentLossByMonth;
+//   let totalMoney = saved + oldCar;
+
+//   while (totalMoney < 0) {
+//     le;
+//   }
+// }
+
+// console.log(nbMonths(2000, 8000, 1000, 1.5));
+
+// function reversing(str) {}
+
+// console.log(reversing('Reverse this string, please!'));
+
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   myFunction: function getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// console.log(customer.myFunction()); // valid
+// console.log(customer.getFullName()); // error
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ['premium', 'promoted', 'top', 'trusted'],
+//   owner: {
+//     name: 'Henry Sibola',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// function multiply() {
+//   let total = 1;
+
+//   for (const argument of arguments) {
+//     total *= argument;
+//   }
+
+//   return total;
+// }
+
+// const multiply = (...args) =>
+//   console.log(args.reduce((total, arg) => total + arg, 0));
+
+// multiply(1, 2, 3);
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
+
+// const filteredNumbers = numbers.filter(a => a > threshold);
+// console.log(...filteredNumbers);
+
 // const players = [
 //   { id: 'id-1', tag: 'Mango', isOnline: true, rank: 800 },
 //   { id: 'id-2', tag: 'Poly', isOnline: false, rank: 600 },
