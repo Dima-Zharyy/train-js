@@ -48,23 +48,114 @@
 // console.log(hat);
 // console.log(hoody);
 
-const counter = {
-  value: 0,
-  increment(value) {
-    console.log(this);
-    this.value += value;
-  },
-  decrement(value) {
-    console.log(this);
-    this.value -= value;
-  },
+// const counter = {
+//   value: 0,
+//   increment(value) {
+//     console.log(this);
+//     this.value += value;
+//   },
+//   decrement(value) {
+//     console.log(this);
+//     this.value -= value;
+//   },
+// };
+
+// const updateCounter = function (value, operation) {
+//   operation(value);
+// };
+
+// updateCounter(10, counter.increment.bind(counter));
+// console.log(counter);
+// updateCounter(1, counter.decrement.bind(counter));
+// console.log(counter);
+
+// const model = {
+//   model: 'Tesla',
+// };
+
+// const car = Object.create(model);
+// car.wheels = 4;
+// car.engine = 1;
+
+// const whiteCar = Object.create(car);
+// whiteCar.color = 'white';
+// whiteCar.extra = 'turbo';
+// whiteCar.super = function () {
+//   console.log('Privet');
+// };
+// console.log(whiteCar);
+
+// // console.log(whiteCar.color);
+// // console.log(whiteCar.model);
+
+// // for (const key in whiteCar) {
+// //   if (whiteCar.hasOwnProperty(key)) console.log(key);
+// // }
+
+// const keys = Object.keys(whiteCar);
+// console.log(keys);
+
+// const objC = {
+//   z: 5,
+// };
+
+// console.log('objC: ', objC);
+
+// const objB = Object.create(objC);
+// objB.y = 2;
+
+// console.log('ObjB: ', objB);
+
+// const objA = Object.create(objB);
+// objA.x = 1;
+
+// console.log('objA: ', objA);
+
+// const dummyObj = Object.create({ message: "This is prototype's property" });
+// dummyObj.message = 'This is own property';
+// console.log(dummyObj);
+
+// console.log(dummyObj.message);
+
+// const Car = function (
+//   { brand, model, price } = { brand: 1, model: 2, price: 3 }
+// ) {
+//   this.brand = brand;
+//   this.model = model;
+//   this.price = price;
+// };
+// console.log(Car);
+
+// const myCar = new Car({ brand: 'BMW', price: 34000 });
+
+// console.log(myCar);
+
+// const myCar2 = new Car({ brand: 'Tesla', model: 'X', price: 48000 });
+// console.log(myCar2);
+
+// const myCar3 = new Car();
+// console.log(myCar3);
+
+const User = function ({ name, email, password } = {}) {
+  this.name = name;
+  this.email = email;
+  this.password = password;
 };
 
-const updateCounter = function (value, operation) {
-  operation(value);
+User.prototype.changeName = function (name) {
+  this.name = name;
 };
 
-updateCounter(10, counter.increment.bind(counter));
-console.log(counter);
-updateCounter(1, counter.decrement.bind(counter));
-console.log(counter);
+User.prototype.changeMail = function (email) {
+  this.email = email;
+};
+
+const dima = new User({
+  name: 'Dima',
+  email: 'd1mkaa@yahoo.com',
+  password: 123345,
+});
+console.log(dima);
+dima.changeName('Dmitrulin');
+dima.changeMail('my-new-email@123.com');
+console.table(dima);
