@@ -136,26 +136,259 @@
 // const myCar3 = new Car();
 // console.log(myCar3);
 
-const User = function ({ name, email, password } = {}) {
-  this.name = name;
-  this.email = email;
-  this.password = password;
+// const User = function ({ name, email, password } = {}) {
+//   this.name = name;
+//   this.email = email;
+//   this.password = password;
+// };
+
+// User.prototype.changeName = function (name) {
+//   this.name = name;
+// };
+
+// User.prototype.changeMail = function (email) {
+//   this.email = email;
+// };
+
+// const dima = new User({
+//   name: 'Dima',
+//   email: 'd1mkaa@yahoo.com',
+//   password: 123345,
+// });
+// console.log(dima);
+// dima.changeName('Dmitrulin');
+// dima.changeMail('my-new-email@123.com');
+// console.table(dima);
+
+// function showTag() {
+//   console.log('This: ', this);
+// }
+
+// const changeColor = function (color) {
+//   console.log(this);
+//   this.color = color;
+// };
+
+// const hat = {
+//   color: 'red',
+// };
+
+// const dress = {
+//   color: 'black',
+// };
+
+// changeColor.call(hat, 'super Blue');
+// changeColor.call(dress, 'PUPER SUPER RED');
+
+// console.log(hat);
+// console.log(dress);
+
+// const changeHatColor = changeColor.bind(hat);
+// const changeDressColor = changeColor.bind(dress);
+// changeDressColor('Yeah!!! We changed color of dress to Pink');
+// changeHatColor('Due to bind - changed color to RED');
+// console.log(hat);
+// console.log(dress);
+// const count = {
+//   value: 0,
+//   increment(value) {
+//     this.value += value;
+//     console.log(this);
+//   },
+//   decrement(value) {
+//     this.value -= value;
+//     console.log(this);
+//   },
+// };
+
+// const updateCount = function (value, operation) {
+//   operation(value);
+// };
+
+// updateCount(10, count.increment.bind(count));
+// updateCount(10, count.increment.bind(count));
+// updateCount(120, count.decrement.bind(count));
+// updateCount(120, count.decrement.bind(count));
+
+// updateCount(50, count.decrement.call(count, 50));
+
+// const makeChangeColor = function () {
+//   const changeColor = function (color) {
+//     console.log('This: ', this);
+//     this.color = color;
+//   };
+
+//   return changeColor;
+// };
+
+// const updateColor = makeChangeColor();
+
+// const hat = {
+//   color: 'blue',
+//   updateColor,
+// };
+
+// hat.updateColor('red');
+// console.log(hat);
+
+// const objA = {
+//   name: 'Mango',
+//   showThis() {
+//     console.log('Show this: ', this);
+//     // return this;
+//   },
+// };
+
+// const foo = objA.showThis;
+// // const fooA = objA.showThis();
+
+// // console.log(foo);
+// foo();
+
+// function titleCase(str) {
+//   const normalized = str.toLowerCase();
+//   const words = normalized.split(' ');
+//   console.log(words);
+//   const everyFirstLetterUpper = words.map(a => {
+//     const arr = a.split('');
+//     arr.splice(0, 1, arr[0].toUpperCase());
+//     return arr.join('');
+//   });
+//   return everyFirstLetterUpper.join(' ');
+// }
+
+// console.log(titleCase("I'm a little tea pot"));
+
+// function mutation(arr) {
+//   const arr1 = arr[0].split('');
+//   const arr2 = arr[1].split('');
+
+//   if (arr1.length < arr2.length) {
+//     return false;
+//   }
+
+//   return arr2.every(a => arr1.includes(a));
+// }
+
+// console.log(mutation(['hello', 'hel']));
+
+// const objA = {
+//   x: 1,
+// };
+
+// console.log(objA.hasOwnProperty('constructor'));
+
+// const objB = Object.create(objA);
+// console.log(objB);
+// console.log(objB.x);
+// objB.y = 2;
+// console.log(objB);
+// const objC = Object.create(objB);
+// console.log(objC.x);
+// console.log(objC.y);
+
+// const objB = {
+//   y: 2,
+// };
+
+// const objC = {
+//   z: 3,
+// };
+
+// const Car = function ({ brand, model, price } = {}) {
+//   this.brand = brand;
+//   this.model = model;
+//   this.price = price;
+//   // this.changePrice = function (newPrice) {
+//   //   this.price = newPrice;
+//   // };
+// };
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice;
+// };
+
+// const bmw = new Car({ brand: 'BMW', model: 'X5', price: 70000 });
+// console.log(bmw);
+
+// const tesla = new Car();
+// console.log(tesla);
+// tesla.changePrice(80000);
+// console.log(tesla);
+
+// console.log(Car.prototype);
+
+// Car.prototype.newFoo = function () {
+//   console.log('Our new function in Car');
+// };
+
+// console.log(Car.prototype);
+// console.log(tesla);
+// tesla.newFoo();
+// tesla.changePrice(1000);
+// console.log(tesla);
+
+// const User = function ({ fullName, login, password } = {}) {
+//   this.fullName = fullName;
+//   this.login = login;
+//   this.password = password;
+// };
+
+// User.prototype.changeLogin = function (newLogin) {
+//   this.login = newLogin;
+// };
+
+// User.prototype.addAge = function (age) {
+//   this.age = age;
+// };
+
+// console.log(User);
+
+// const dimka = new User({
+//   fullName: 'Dima Zharyy',
+//   login: 'd1mka',
+//   password: '123123123',
+// });
+
+// console.log(dimka);
+// dimka.addAge('18');
+// console.log(dimka);
+// dimka.changeLogin('d1mkaaaaa');
+// console.log(dimka);
+
+// const oleg = new User({
+//   fullName: 'Oleg Maloy',
+//   login: 'olezha',
+//   password: 'qweqwe',
+// });
+
+// console.log(oleg);
+// oleg.changeLogin('Oleger');
+// console.log(oleg);
+
+// const objA = {
+//   c: 3,
+// };
+
+const objA = {
+  c: 2,
 };
 
-User.prototype.changeName = function (name) {
-  this.name = name;
-};
+const objB = objA;
+objB.x = 3;
+console.log(objA);
+console.log(objB);
+console.log(objA.hasOwnProperty('x'));
 
-User.prototype.changeMail = function (email) {
-  this.email = email;
-};
+// console.log(objA.__proto__ === Object.prototype);
 
-const dima = new User({
-  name: 'Dima',
-  email: 'd1mkaa@yahoo.com',
-  password: 123345,
-});
-console.log(dima);
-dima.changeName('Dmitrulin');
-dima.changeMail('my-new-email@123.com');
-console.table(dima);
+// console.log(Math.prototype);
+
+// Math.myNumber = function (number) {
+//   console.log(number);
+// };
+
+// Math.myNumber(3000);
+
+// const myNumber = new Math();
+// console.log(myNumber);
