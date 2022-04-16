@@ -370,15 +370,15 @@
 //   c: 3,
 // };
 
-const objA = {
-  c: 2,
-};
+// const objA = {
+//   c: 2,
+// };
 
-const objB = objA;
-objB.x = 3;
-console.log(objA);
-console.log(objB);
-console.log(objA.hasOwnProperty('x'));
+// const objB = objA;
+// objB.x = 3;
+// console.log(objA);
+// console.log(objB);
+// console.log(objA.hasOwnProperty('x'));
 
 // console.log(objA.__proto__ === Object.prototype);
 
@@ -392,3 +392,175 @@ console.log(objA.hasOwnProperty('x'));
 
 // const myNumber = new Math();
 // console.log(myNumber);
+
+// const externalInterface = {
+//   playerStatus: {
+//     vip: 'VIP',
+//     golden: 'Golden',
+//     silver: 'Silver',
+//     bronze: 'Bronze',
+//   },
+//   addCity(newCity) {
+//     this.city = newCity;
+//   },
+//   addPlayerStatus({ newStatus = this.playerStatus.bronze }) {
+//     this.status = newStatus;
+//   },
+// };
+// const Player = function ({ playerId, login, country, clan = 'none' } = {}) {
+//   this.playerId = playerId;
+//   this.login = login;
+//   this.country = country;
+//   this.clan = clan;
+// };
+
+// Player.prototype.changeLogin = function (newLogin) {
+//   this.login = newLogin;
+// };
+
+// Player.prototype.changeClan = function (newClan) {
+//   this.clan = newClan;
+// };
+
+// const d1mka = new Player({ playerId: 1, login: 'd1mka', country: 'Ukraine' });
+// console.log(d1mka);
+
+// d1mka.changeClan('POLTAVA clan');
+// d1mka.changeLogin('d1mkaa');
+// console.log(d1mka);
+
+// class Player1 {
+//   static description = 'Class describes Player';
+//   static logInfo = function (obj) {
+//     console.log(obj);
+//   };
+
+//   #password = '123123123';
+
+//   className = 'Player1';
+
+//   constructor({ playerId, login, country, clan = 'none' } = {}) {
+//     this.playerId = playerId;
+//     this.login = login;
+//     this.country = country;
+//     this.clan = clan;
+//   }
+
+//   get playerCity() {
+//     return this.city;
+//   }
+
+//   set addCity(newCity) {
+//     this.city = newCity;
+//   }
+
+//   get playerClan() {
+//     return this.clan;
+//   }
+
+//   set changeClan(newClan) {
+//     this.clan = newClan;
+//   }
+
+//   get playerLogin() {
+//     return this.login;
+//   }
+
+//   set changeLogin(newLogin) {
+//     this.login = newLogin;
+//   }
+
+//   get playerStatus() {
+//     return this.status;
+//   }
+
+//   set changeStatus(newStatus) {
+//     this.status = newStatus;
+//   }
+
+//   // addCity(newCity) {
+//   //   this.city = newCity;
+//   // }
+
+//   // changeClan(newClan) {
+//   //   this.clan = newClan;
+//   // }
+
+//   // changeLogin(newLogin) {
+//   //   this.login = newLogin;
+//   // }
+
+//   // changeStatus(newStatus) {
+//   //   this.status = newStatus;
+//   // }
+// }
+
+// const myPlayer = new Player1({
+//   playerId: 1,
+//   login: 'd1mka',
+//   country: 'Ukraine',
+// });
+
+// console.table(myPlayer);
+
+// myPlayer.changeClan = 'POLTAVA-clan';
+// console.table(myPlayer);
+// console.log(myPlayer.playerLogin);
+// console.log(myPlayer.login);
+// myPlayer.changeLogin = 'd1mkaaaaaaa';
+// console.log(myPlayer.playerLogin);
+
+// myPlayer.changeStatus('VIP');
+// console.log(myPlayer);
+
+// myPlayer.changeClan('POLTAVA clan');
+// console.log(myPlayer);
+
+// myPlayer.changeLogin('d1mkaaaaa');
+// console.log(myPlayer);
+
+// console.log(Player1.description);
+// Player1.logInfo(myPlayer);
+// console.log(myPlayer.className);
+
+class Hero {
+  constructor({ name = 'hero', xp = 0 } = {}) {
+    this.name = name;
+    this.xp = xp;
+  }
+
+  gainXp(amount) {
+    console.log(`${this.name} gains ${amount}xp`);
+    this.xp += amount;
+  }
+}
+
+class Warrior extends Hero {
+  constructor({ weapon = 'knife', ...restProps }) {
+    super(restProps);
+    this.weapon = weapon;
+  }
+
+  set addWeapon(newWeapon) {
+    this.weapon = newWeapon;
+  }
+}
+
+class Wizard extends Hero {
+  constructor({ spells = [], ...restProps }) {
+    super(restProps);
+    this.spells = spells;
+  }
+}
+
+const mango = new Warrior({ name: 'Mango', xp: 1000 });
+console.log(mango);
+mango.gainXp(5000);
+console.log(mango);
+mango.addWeapon = 'Gun';
+console.log(mango);
+
+const dima = new Wizard({ name: 'd1mkaa', spells: ['fireball', 'heal'] });
+console.log(dima);
+dima.gainXp(2000);
+console.log(dima);
