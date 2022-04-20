@@ -8,62 +8,299 @@
 // 5. Вказуємо країну через prompt  і купляємо тур.
 // 6. Виводимо повідомлення, що тур оплачений і залишок на рахунку користувача.
 
-// const countries = ['Ukraine', 'Poland', 'Croatia', 'Montenegro', 'France', 'USA'];
+// const countries = [
+//   'Ukraine',
+//   'Poland',
+//   'Croatia',
+//   'Montenegro',
+//   'France',
+//   'USA',
+// ];
 // const countriesPrice = [100, 200, 300, 400, 500, 600];
 
-// const users = [];
-
-// const signUp = () => {
-//   const login = prompt('Enter Login to sign up');
-//   const password = prompt('Enter password');
-//   users.push({ login, password });
-// };
-
-// // signUp();
-
-// console.log(users);
+// const login = prompt('Enter login');
+// const password = prompt('Enter password');
 
 // const signIn = () => {
-//   const login = prompt('Enter Login to sign in');
-
-//   for (const el of users) {
-//     if (login === el.login) {
-//       const password = prompt('Enter password');
-//       if (password === el.password) {
-//         return alert(`Hi ${login}! Glad to see you!`);
-//       } else {
-//         alert('Error! Invalid password');
-//         return signIn();
-//       }
-//     }
-//     alert(`User ${login} didn't exist! Try Again`);
-//     return signIn();
+//   const signLogin = prompt('Enter Login to sign in');
+//   if (signLogin === null) {
+//     return;
 //   }
+
+//   if (login === signLogin) {
+//     const signPassword = prompt('Enter password to sign in');
+//     if (password === signPassword) {
+//       return alert(`Hi ${login}! Glad to see you!`);
+//     } else {
+//       alert('Error! Invalid password! Try Again');
+//       return signIn();
+//     }
+//   }
+//   alert(`User ${signLogin} didn't exist! Try Again`);
+//   return signIn();
 // };
 
-// // signIn();
+// signIn();
 
 // const affordableCountries = () => {
-//   const avaliableFunds = prompt('What is your budget?');
+//   let avaliableFunds = prompt('What is your budget?');
 
-//   if (avaliableFunds <= 100) {
-//     const avaliableCountries = countries.slice(0, 1);
-//     alert(`Countries available to visit are ${avaliableCountries}`);
-//     const userChoice = prompt('What country do you want to choose?');
-//     if (userChoice === avaliableCountries.find(a => a === userChoice)) {
-//       return alert(`Done! You have purchased tour to ${userChoice}`);
-//     }
-//     alert('Try again');
+//   if (avaliableFunds === null) {
+//     return;
+//   }
+
+//   if (avaliableFunds < 100) {
+//     alert('You have not enough funds! Deposit your balance and try again!');
 //     return affordableCountries();
-//   } else if (avaliableFunds > 100 && avaliableFunds <= 200) {
+//   }
+
+//   if (avaliableFunds >= 100 && avaliableFunds < 200) {
+//     const avaliableCountries = countries.slice(0, 1);
+//     alert(`You can visit next countries: ${avaliableCountries}`);
+
+//     const userChoice = prompt('Choose the country you want to visit');
+//     if (userChoice === null) {
+//       alert('You did not choose any country');
+//       return affordableCountries();
+//     }
+
+//     if (avaliableCountries.every(a => a !== userChoice)) {
+//       alert('Please, type correctly! Try again!');
+//       return affordableCountries();
+//     }
+
+//     if (userChoice === avaliableCountries[0]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[0]
+//         }`
+//       );
+//     }
+//   }
+//   if (avaliableFunds >= 200 && avaliableFunds < 300) {
+//     const avaliableCountries = countries.slice(0, 2);
+//     alert(`You can visit next countries: ${avaliableCountries}`);
+
+//     const userChoice = prompt('Choose the country you want to visit');
+//     if (userChoice === null) {
+//       alert('You did not choose any country');
+//       return;
+//     }
+
+//     if (avaliableCountries.every(a => a !== userChoice)) {
+//       alert('Please, type correctly! Try again!');
+//       return affordableCountries();
+//     }
+
+//     if (userChoice === avaliableCountries[0]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[0]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[1]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[1]
+//         }`
+//       );
+//     }
 //     return;
-//   } else if (avaliableFunds > 200 && avaliableFunds <= 300) {
+//   }
+//   if (avaliableFunds >= 300 && avaliableFunds < 400) {
+//     const avaliableCountries = countries.slice(0, 3);
+//     alert(`You can visit next countries: ${avaliableCountries}`);
+
+//     const userChoice = prompt('Choose the country you want to visit');
+//     if (userChoice === null) {
+//       alert('You did not choose any country');
+//       return;
+//     }
+
+//     if (avaliableCountries.every(a => a !== userChoice)) {
+//       alert('Please, type correctly! Try again!');
+//       return affordableCountries();
+//     }
+
+//     if (userChoice === avaliableCountries[0]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[0]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[1]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[1]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[2]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[2]
+//         }`
+//       );
+//     }
 //     return;
-//   } else if (avaliableFunds > 300 && avaliableFunds <= 400) {
+//   }
+//   if (avaliableFunds >= 400 && avaliableFunds < 500) {
+//     const avaliableCountries = countries.slice(0, 3);
+//     alert(`You can visit next countries: ${avaliableCountries}`);
+
+//     const userChoice = prompt('Choose the country you want to visit');
+//     if (userChoice === null) {
+//       alert('You did not choose any country');
+//       return;
+//     }
+
+//     if (avaliableCountries.every(a => a !== userChoice)) {
+//       alert('Please, type correctly! Try again!');
+//       return affordableCountries();
+//     }
+
+//     if (userChoice === avaliableCountries[0]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[0]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[1]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[1]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[2]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[2]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[3]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[3]
+//         }`
+//       );
+//     }
 //     return;
-//   } else if (avaliableFunds > 400 && avaliableFunds <= 500) {
+//   }
+//   if (avaliableFunds >= 500 && avaliableFunds < 600) {
+//     const avaliableCountries = countries.slice(0, 4);
+//     alert(`You can visit next countries: ${avaliableCountries}`);
+
+//     const userChoice = prompt('Choose the country you want to visit');
+//     if (userChoice === null) {
+//       alert('You did not choose any country');
+//       return;
+//     }
+
+//     if (avaliableCountries.every(a => a !== userChoice)) {
+//       alert('Please, type correctly! Try again!');
+//       return affordableCountries();
+//     }
+
+//     if (userChoice === avaliableCountries[0]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[0]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[1]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[1]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[2]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[2]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[3]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[3]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[4]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[4]
+//         }`
+//       );
+//     }
 //     return;
-//   } else if (avaliableFunds > 500) {
+//   }
+//   if (avaliableFunds >= 600) {
+//     const avaliableCountries = countries.slice(0);
+//     alert(`You can visit next countries: ${avaliableCountries}`);
+
+//     const userChoice = prompt('Choose the country you want to visit');
+//     if (userChoice === null) {
+//       alert('You did not choose any country');
+//       return;
+//     }
+
+//     if (avaliableCountries.every(a => a !== userChoice)) {
+//       alert('Please, type correctly! Try again!');
+//       return affordableCountries();
+//     }
+
+//     if (userChoice === avaliableCountries[0]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[0]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[1]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[1]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[2]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[2]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[3]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[3]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[4]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[4]
+//         }`
+//       );
+//     }
+//     if (userChoice === avaliableCountries[5]) {
+//       alert(
+//         `Your choice is ${userChoice}! Funds left ${
+//           avaliableFunds - countriesPrice[5]
+//         }`
+//       );
+//     }
+
 //     return;
 //   }
 // };

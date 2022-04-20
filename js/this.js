@@ -523,44 +523,179 @@
 // Player1.logInfo(myPlayer);
 // console.log(myPlayer.className);
 
-class Hero {
-  constructor({ name = 'hero', xp = 0 } = {}) {
-    this.name = name;
-    this.xp = xp;
-  }
+// class Hero {
+//   constructor({ name = 'hero', xp = 0 } = {}) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
 
-  gainXp(amount) {
-    console.log(`${this.name} gains ${amount}xp`);
-    this.xp += amount;
-  }
-}
+//   gainXp(amount) {
+//     console.log(`${this.name} gains ${amount}xp`);
+//     this.xp += amount;
+//   }
+// }
 
-class Warrior extends Hero {
-  constructor({ weapon = 'knife', ...restProps }) {
-    super(restProps);
-    this.weapon = weapon;
-  }
+// class Warrior extends Hero {
+//   constructor({ weapon = 'knife', ...restProps }) {
+//     super(restProps);
+//     this.weapon = weapon;
+//   }
 
-  set addWeapon(newWeapon) {
-    this.weapon = newWeapon;
-  }
-}
+//   set addWeapon(newWeapon) {
+//     this.weapon = newWeapon;
+//   }
+// }
 
-class Wizard extends Hero {
-  constructor({ spells = [], ...restProps }) {
-    super(restProps);
-    this.spells = spells;
-  }
-}
+// class Wizard extends Hero {
+//   constructor({ spells = [], ...restProps }) {
+//     super(restProps);
+//     this.spells = spells;
+//   }
+// }
 
-const mango = new Warrior({ name: 'Mango', xp: 1000 });
-console.log(mango);
-mango.gainXp(5000);
-console.log(mango);
-mango.addWeapon = 'Gun';
-console.log(mango);
+// const mango = new Warrior({ name: 'Mango', xp: 1000 });
+// console.log(mango);
+// mango.gainXp(5000);
+// console.log(mango);
+// mango.addWeapon = 'Gun';
+// console.log(mango);
 
-const dima = new Wizard({ name: 'd1mkaa', spells: ['fireball', 'heal'] });
-console.log(dima);
-dima.gainXp(2000);
-console.log(dima);
+// const dima = new Wizard({ name: 'd1mkaa', spells: ['fireball', 'heal'] });
+// console.log(dima);
+// dima.gainXp(2000);
+// console.log(dima);
+
+//
+// Реалізуйте функцію, яка розгладить масив:
+// const arr = [1, 2, [3, 4], [5, 6], 7];
+
+// const spreadArr = function (array) {
+//   const newArr = [];
+//   for (const el of array) {
+//     if (Array.isArray(el)) {
+//       newArr.push(...el);
+//     } else {
+//       newArr.push(el);
+//     }
+//   }
+//   return newArr;
+// };
+
+// console.log(spreadArr(arr));
+
+// Result = [1, 2, 3, 4, 5, 6, 7]
+
+// 6. Напиши функцію, яка приймає рядок text, та повертає масив усіх великих літер, які є в text в такому ж порядку.
+// Приклад:
+
+// const getCapitals = function (str) {
+//   const arr = str.split('');
+//   const result = [];
+
+//   for (const el of arr) {
+//     if (!Number.isNaN(+el)) {
+//       continue;
+//     }
+
+//     if (el === el.toUpperCase() && el !== ' ') {
+//       result.push(el);
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(typeof 1);
+
+// console.log(getCapitals('Ukraine Everywhere')); // ['U', 'E']
+// console.log(getCapitals('UkraiNe EveRywherE')); // ['U', 'N', 'E', 'R', 'E']
+// console.log(getCapitals('1234M5678A9')); // ['M', 'A']
+
+// 2. У нас есть объект, в котором храняться зарплаты команды.
+// Напишите код для сумирования всех зарплат и сохраните его результат в переменной sum.
+// Если объект salaries пуст, то результат должен быть 0.
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+
+// const sum = Object.values(salaries);
+
+// let result = 0;
+
+// for (const el of sum) {
+//   result += el;
+// }
+
+// console.log(result);
+
+// const calc = {
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+
+//   sum() {
+//     const { a, b } = this;
+//     return a + b;
+//   },
+// };
+
+// const stones = [
+//   { name: 'Изумруд', price: 1300, quantity: 4 },
+//   { name: 'Бриллиант', price: 2700, quantity: 6 },
+//   { name: 'Сапфир', price: 400, quantity: 7 },
+//   { name: 'Щебень', price: 150, quantity: 100 },
+// ];
+
+// console.log(stones);
+
+// const calcTotalPrice = function (stones, stoneName) {
+//   const result = stones.find(a => a.name === stoneName);
+//   return result.price * result.quantity;
+// };
+
+// console.log(calcTotalPrice(stones, 'Щебень'));
+
+// const animal = {
+//   legs: 4,
+//   changeName(name) {
+//     this.name = name;
+//   },
+// };
+
+// const dog = Object.create(animal);
+
+// dog.name = 'Oliver';
+
+// for (const key in dog) {
+//   console.log(key);
+// }
+
+// const puppy = Object.create(dog);
+
+// puppy.surname = 'Junior';
+
+// for (const key in puppy) {
+//   console.log(key);
+// }
+
+// const arr = Object.keys(puppy);
+// console.log(arr);
+
+// dog.changeName('Ollie');
+// console.log(dog);
+
+// class User {
+//   #email;
+
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
+
+//   get emailAddress() {
+//     return this.#email;
+//   }
+// }
