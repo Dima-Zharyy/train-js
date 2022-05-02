@@ -13,11 +13,73 @@ function onFormSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
-
-  console.log(formData);
+  const dataObj = {};
 
   formData.forEach((value, name) => {
-    console.log('onFormSubmit -> name', name);
-    console.log('onFormSubmit -> value', value);
+    dataObj[name] = value;
   });
+
+  console.log(dataObj);
 }
+
+//   console.log('Form submitted');
+
+//   const formElements = event.currentTarget.elements;
+//   const mail = formElements.email.value;
+//   const password = formElements.password.value;
+//   const subscriptionType = formElements.subscription.value;
+
+//   const formData = {
+//     mail,
+//     password,
+//     subscriptionType,
+//   };
+
+//   console.log(formData);
+
+//   console.log(`mail: ${mail}
+// password: ${password}
+// subscrpiption: ${subscriptionType}`);
+// }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// form.addEventListener('submit', onFormSubmit);
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+
+//   const formData = new FormData(event.currentTarget);
+
+//   console.log(formData);
+
+//   formData.forEach((value, name) => {
+//     console.log('onFormSubmit -> name', name);
+//     console.log('onFormSubmit -> value', value);
+//   });
+// }
