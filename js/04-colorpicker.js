@@ -15,60 +15,144 @@ const colors = [
 ];
 
 const paletteContainer = document.querySelector('.js-palette');
-const cardsMarkup = createColorCardsMarkup(colors);
-
-paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
-
-paletteContainer.addEventListener('click', onPaletteContainerClick);
+const newElements = createColorCardsMarkup(colors);
 
 function createColorCardsMarkup(colors) {
   return colors
     .map(({ hex, rgb }) => {
-      return `
-    <div class="color-card">
-     <div><div><div> <div
-     class="color-swatch"
-     data-hex="${hex}"
-     data-rgb="${rgb}"
-     style="background-color: ${hex}"
-   ></div></div></div></div>
-      <div class="color-meta">
-        <p>HEX: ${hex}</p>
-        <p>RGB: ${rgb}</p>
-      </div>
+      return ` <div class="color-card">
+    <div
+      class="color-swatch"
+      data-hex="${hex}"
+      data-rgb="${rgb}"
+      style="background-color: ${hex}"
+    ></div>
+    <div class="color-meta">
+      <p>HEX: ${hex}</p>
+      <p>RGB: ${rgb}</p>
     </div>
-    `;
+  </div>
+  `;
     })
     .join('');
 }
 
-function onPaletteContainerClick(evt) {
-  const isColorSwatchEl = evt.target.classList.contains('color-swatch');
+paletteContainer.insertAdjacentHTML('beforeend', newElements);
 
-  if (!isColorSwatchEl) {
+paletteContainer.addEventListener('click', onPaletteClick);
+
+function onPaletteClick(event) {
+  if (!event.target.classList.contains('color-swatch')) {
     return;
   }
 
-  const swatchEl = evt.target;
-  const parentColorCard = swatchEl.closest('.color-card');
-
-  removeActiveCardClass();
-  addActiveCardClass(parentColorCard);
-  setBodyBgColor(swatchEl.dataset.hex);
-}
-
-function setBodyBgColor(color) {
-  document.body.style.backgroundColor = color;
-}
-
-function removeActiveCardClass() {
   const currentActiveCard = document.querySelector('.color-card.is-active');
 
   if (currentActiveCard) {
     currentActiveCard.classList.remove('is-active');
   }
+
+  event.target.closest('.color-card').classList.add('is-active');
+
+  document.body.style.backgroundColor = event.target.style.backgroundColor;
 }
 
-function addActiveCardClass(card) {
-  card.classList.add('is-active');
-}
+// {
+//   <div class="color-card">
+//     <div
+//       class="color-swatch"
+//       data-hex="#955014"
+//       data-rgb="149,80,20"
+//       style="background-color: #955014"
+//     ></div>
+//     <div class="color-meta">
+//       <p>HEX: #955014</p>
+//       <p>RGB: 149,80,20</p>
+//     </div>
+//   </div>;
+// }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// const paletteContainer = document.querySelector('.js-palette');
+// const cardsMarkup = createColorCardsMarkup(colors);
+
+// paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+
+// paletteContainer.addEventListener('click', onPaletteContainerClick);
+
+// function createColorCardsMarkup(colors) {
+//   return colors
+//     .map(({ hex, rgb }) => {
+//       return `
+//     <div class="color-card">
+//      <div><div><div> <div
+//      class="color-swatch"
+//      data-hex="${hex}"
+//      data-rgb="${rgb}"
+//      style="background-color: ${hex}"
+//    ></div></div></div></div>
+//       <div class="color-meta">
+//         <p>HEX: ${hex}</p>
+//         <p>RGB: ${rgb}</p>
+//       </div>
+//     </div>
+//     `;
+//     })
+//     .join('');
+// }
+
+// function onPaletteContainerClick(evt) {
+//   const isColorSwatchEl = evt.target.classList.contains('color-swatch');
+
+//   if (!isColorSwatchEl) {
+//     return;
+//   }
+
+//   const swatchEl = evt.target;
+//   const parentColorCard = swatchEl.closest('.color-card');
+
+//   removeActiveCardClass();
+//   addActiveCardClass(parentColorCard);
+//   setBodyBgColor(swatchEl.dataset.hex);
+// }
+
+// function setBodyBgColor(color) {
+//   document.body.style.backgroundColor = color;
+// }
+
+// function removeActiveCardClass() {
+//   const currentActiveCard = document.querySelector('.color-card.is-active');
+
+//   if (currentActiveCard) {
+//     currentActiveCard.classList.remove('is-active');
+//   }
+// }
+
+// function addActiveCardClass(card) {
+//   card.classList.add('is-active');
+// }

@@ -4,31 +4,79 @@
  * - фильтр цели клика
  */
 
-const container = document.querySelector('.js-container');
+const buttonsContainer = document.querySelector('.js-container');
 
-container.addEventListener('click', onClick);
+buttonsContainer.addEventListener('click', onButtonClick);
 
-function onClick(evt) {
-  if (evt.target.nodeName !== 'BUTTON') {
-    return;
-  }
-
-  console.log(evt.target.textContent);
+function onButtonClick(event) {
+  if (event.target === event.currentTarget) return;
+  // if (event.target.nodeName !== 'BUTTON') return;
+  console.log('Button clicked - ', event.target);
 }
 
-/*
- * Код добавления кнопок
- */
-const addBtn = document.querySelector('.js-add-btn');
-let labelCounter = 6;
+const addBtnButton = document.querySelector('.js-add-btn');
 
-addBtn.addEventListener('click', onAddBtnClick);
+addBtnButton.addEventListener('click', onCreateBtnClick);
 
-function onAddBtnClick() {
-  const btn = document.createElement('button');
-  btn.textContent = `Кнопка ${labelCounter}`;
-  btn.type = 'button';
-
-  container.appendChild(btn);
-  labelCounter += 1;
+function onCreateBtnClick() {
+  const newBtn = document.createElement('button');
+  newBtn.type = 'button';
+  newBtn.textContent = `Кнопка ${
+    Number(buttonsContainer.lastElementChild.textContent.slice(7)) + 1
+  }`;
+  buttonsContainer.appendChild(newBtn);
 }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// const container = document.querySelector('.js-container');
+
+// container.addEventListener('click', onClick);
+
+// function onClick(evt) {
+//   if (evt.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
+
+//   console.log(evt.target.textContent);
+// }
+
+// /*
+//  * Код добавления кнопок
+//  */
+// const addBtn = document.querySelector('.js-add-btn');
+// let labelCounter = 6;
+
+// addBtn.addEventListener('click', onAddBtnClick);
+
+// function onAddBtnClick() {
+//   const btn = document.createElement('button');
+//   btn.textContent = `Кнопка ${labelCounter}`;
+//   btn.type = 'button';
+
+//   container.appendChild(btn);
+//   labelCounter += 1;
+// }
