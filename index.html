@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hamberger order</title>
+    <title>Hamburger order</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +21,54 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="interface"></div>
+    <h1 class="title">Homework blended group</h1>
+    <div class="container">
+      <div class="order-wrapper">
+        <form action="" class="form">
+          <h2 class="form__title">YOUR ORDER</h2>
+          <div class="form__input-wrap">
+            <input
+              class="form__input js-input-size"
+              type="text"
+              placeholder="Choose size of hamburger"
+            />
+            <input
+              class="form__input js-input-amount"
+              type="number"
+              min="1"
+              max="50"
+              placeholder="Amount"
+            />
+            <div class="topping-input-container">
+              <input
+                class="form__input js-input-topping"
+                type="text"
+                placeholder="Choose toppings"
+              />
+              <button type="button" class="form__btn-add">+</button>
+              <button type="button" class="form__btn-subtract">-</button>
+            </div>
+          </div>
+
+          <button type="submit" disabled class="form__btn-submit">Submit order</button>
+        </form>
+        <div class="information"></div>
+      </div>
+      <div class="menu menu-wrapper">
+        <h2 class="menu__title">Menu</h2>
+        <div class="menu__base-wrapper">
+          <div class="menu__wrap">
+            <h3 class="menu__subtitle">TOPPINGS</h3>
+            <ul class="menu__list js-menu-toppings"></ul>
+          </div>
+          <div class="menu__wrap">
+            <h3 class="menu__subtitle">SIZE</h3>
+            <ul class="menu__list js-menu-size"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

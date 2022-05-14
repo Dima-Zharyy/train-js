@@ -1,0 +1,104 @@
+* {
+  outline: 1px solid tomato;
+}
+
+.title {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.order-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  width: 40%;
+  height: auto;
+}
+
+.form {
+  width: 45%;
+}
+.form__title {
+  text-align: center;
+}
+
+.form__input-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.form__input {
+  display: block;
+}
+
+.topping-input-container {
+  position: relative;
+}
+
+.form__btn-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateX(-100%);
+
+  background-color: aquamarine;
+  border-radius: 50%;
+}
+.form__btn-subtract {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+
+  background-color: aquamarine;
+  border-radius: 50%;
+}
+
+.form__btn-submit {
+}
+
+.information {
+  width: 45%;
+  height: auto;
+}
+
+.menu {
+  width: 40%;
+  height: auto;
+}
+.menu-wrapper {
+}
+
+.menu__base-wrapper {
+  display: flex;
+  gap: 10%;
+}
+
+.menu__title {
+  text-align: center;
+}
+.menu__wrap {
+  width: 45%;
+}
+.menu__subtitle {
+  text-align: center;
+}
+.menu__list {
+}
+.menu__list--left {
+}
+.menu__list--right {
+}
