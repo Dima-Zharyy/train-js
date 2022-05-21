@@ -41,12 +41,14 @@ function populateTextarea() {
   const parsedData = JSON.parse(savedData);
   console.log(parsedData);
 
+  if (!parsedData) return;
+
   if (parsedData.name) {
-    refs.form.name = parsedData.name;
+    refs.form.elements.name.value = parsedData.name;
   }
 
   if (parsedData.message) {
-    refs.form.message = parsedData.message;
+    refs.form.elements.message.value = parsedData.message;
   }
 }
 
