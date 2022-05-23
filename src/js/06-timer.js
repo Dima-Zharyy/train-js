@@ -6,9 +6,6 @@ const refs = {
   clockface: document.querySelector('.js-clockface'),
 };
 
-refs.startBtn.addEventListener('click', timer.start.bind(timer));
-
-refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
 class Timer {
   constructor({ onTick }) {
     this.intervalId = null;
@@ -59,6 +56,10 @@ class Timer {
 }
 
 const timer = new Timer({ onTick: updateClockface });
+
+refs.startBtn.addEventListener('click', timer.start.bind(timer));
+
+refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
 
 function updateClockface({ hours, mins, secs }) {
   refs.clockface.textContent = `${hours}::${mins}::${secs}`;
