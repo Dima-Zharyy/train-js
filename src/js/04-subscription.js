@@ -2,34 +2,33 @@ import '../css/common.css';
 import BSN from 'bootstrap.native';
 
 const refs = {
-  subscribeBtn: document.querySelector('[data-subscribe]'),
-  quitBtn: document.querySelector('[data-dismiss]'),
+  modal: document.querySelector('#subscription-modal'),
+  // subscribeBtn: document.querySelector('[data-subscribe]'),
+  // quitBtn: document.querySelector('[data-dismiss]'),
 };
 
-refs.quitBtn.addEventListener('click', onQuitBtn);
+const modal = new BSN.Modal('#subscription-modal');
 
-const myModal = new BSN.Modal('#subscription-modal');
-
-const PROMPT_DELAY = 1000;
+const PROMPT_DELAY = 3000;
 const MAX_PROMPT_ATTEMPTS = 3;
 let modalCounter = 0;
 let hasSubscribed = false;
 
-const interval = setInterval(() => {
+timerSub();
+
+// refs.modal.addEventListener('hide.bs.modal', timerSub);
+
+function timerSub() {
   if (modalCounter === MAX_PROMPT_ATTEMPTS || hasSubscribed) {
-    clearInterval(interval);
     return;
   }
-  myModal.show();
 
-  modalCounter += 1;
-}, PROMPT_DELAY);
-
-function onQuitBtn() {
-  myModal.hide();
+  setTimeout(() => {
+    modal.show();
+    modalCounter += 1;
+  }, PROMPT_DELAY);
 }
 
-//
 //
 //
 //
