@@ -1,9 +1,15 @@
 # js-22
 
-- WebStorage API и JSON
-- Введение в шаблонизацию
-  - [Пакет для Parcel](https://www.npmjs.com/package/parcel-plugin-handlebars-precompile)
-- Билд в production
-  - root link
-  - [Public url](https://parceljs.org/cli.html#set-the-public-url-to-serve-on)
-  - [Структура папок для Parcel](https://github.com/parcel-bundler/parcel/issues/233#issuecomment-599081474)
+- Promise API
+  - Promise.prototype.then(result)
+  - Promise.prototype.catch(error)
+  - Promise.prototype.finally()
+- Цепочки промисов
+- Промисификация функций
+- Статические методы:
+  - Promise.all()
+  - Promise.race()
+- Мастерская: ипподром
+- Чтиво:
+  - [Промисы на примере бургер-вечеринки](https://habr.com/ru/company/nix/blog/323066/)
+  - [У нас проблемы с промисами](https://habr.com/ru/company/mailru/blog/269465/)
