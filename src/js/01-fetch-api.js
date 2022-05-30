@@ -13,6 +13,21 @@
  * - https://pokeapi.co/
  */
 
+import '../css/common.css';
+import pokemonCardTpl from '../templates/pokemon-card.hbs';
+import getRefs from './get-refs';
+
+const refs = getRefs();
+
+fetch('https://pokeapi.co/api/v2/pokemon/1')
+  .then(response => response.json())
+  .then(pokemon => {
+    const markup = pokemonCardTpl(pokemon);
+    console.log(markup);
+    refs.cardContainer.innerHTML = markup;
+  })
+  .catch(err => console.log(err));
+
 // import '../css/common.css';
 // import pokemonCardTpl from '../templates/pokemon-card.hbs';
 // import API from './api-service';
