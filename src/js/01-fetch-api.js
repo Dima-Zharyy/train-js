@@ -14,20 +14,65 @@
  */
 
 import '../css/common.css';
-import pokemonCardTpl from '../templates/pokemon-card.hbs';
 import getRefs from './get-refs';
 
 const refs = getRefs();
 
-fetch('https://pokeapi.co/api/v2/pokemon/1')
-  .then(response => response.json())
-  .then(pokemon => {
-    const markup = pokemonCardTpl(pokemon);
-    console.log(markup);
-    refs.cardContainer.innerHTML = markup;
-  })
-  .catch(err => console.log(err));
+refs.searchForm.addEventListener('submit', onSubmit);
 
+function onSubmit(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+
+  fetchPokemon(refs.formInput.value)
+    .then(renderPokemonCard)
+    .catch(onFetchError)
+    .finally(() => form.reset());
+}
+
+// fetchPokemon(1)
+//   .then(renderPokemonCard)
+//   .catch(err => console.log(err));
+
+function fetchPokemon(id) {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(response =>
+    response.json(),
+  );
+}
+
+function createMarkup({ name, sprites, weight, height, abilities }) {
+  const abilitiesMarkup = abilities
+    .map(item => {
+      return `<li class="list-group-item">${item.ability.name}</li>`;
+    })
+    .join('');
+  return `<div class="card">
+  <div class="card-img-top">
+    <img src="${sprites.front_default}" alt="${name}">
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">Имя: ${name}</h2>
+    <p class="card-text">Вес: ${weight}</p>
+    <p class="card-text">Рост: ${height}</p>
+
+    <p class="card-text"><b>Умения</b></p>
+    <ul class="list-group">
+    ${abilitiesMarkup}
+    </ul>
+  </div>
+</div>`;
+}
+
+function renderPokemonCard(pokemon) {
+  const markup = createMarkup(pokemon);
+  refs.cardContainer.innerHTML = markup;
+}
+
+function onFetchError(err) {
+  console.log(err);
+  alert('Oops! something going wrong');
+}
 // import '../css/common.css';
 // import pokemonCardTpl from '../templates/pokemon-card.hbs';
 // import API from './api-service';
